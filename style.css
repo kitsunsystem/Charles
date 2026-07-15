@@ -52,6 +52,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-text-primary);
     font-weight: 600;
     letter-spacing: 0.02em;
+    line-height: 1.35; /* Fix overlapping when titles wrap */
 }
 
 p {
@@ -697,7 +698,7 @@ ul {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
@@ -1322,15 +1323,12 @@ ul {
 /* -------------------------------------------------------------
    Scroll Reveal Animations Classes
    ------------------------------------------------------------- */
-.service-card, .product-item, .wip-card, .ambition-card-container {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+.service-card, .product-item, .wip-card, .ambition-card-container, .construction-notice-card {
+    transition: var(--transition-smooth);
 }
 
 .reveal-active {
-    opacity: 1;
-    transform: translateY(0);
+    /* Kept for javascript compatibility but disabled to avoid mobile bugs */
 }
 
 /* CSS Animations for Hero */
@@ -1511,6 +1509,45 @@ ul {
     }
 
     /* Centering and spacing rules for text areas on mobile */
+    .wip-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+    
+    .wip-img-wrapper {
+        width: 100% !important;
+        height: 200px !important;
+    }
+    
+    .wip-card {
+        padding: 20px 15px !important;
+        width: 100% !important;
+    }
+    
+    .wip-content {
+        text-align: center !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    .wip-content h3 {
+        line-height: 1.35 !important;
+        font-size: 1.5rem !important;
+        margin-bottom: 12px !important;
+    }
+    
+    .wip-content p {
+        line-height: 1.5 !important;
+        font-size: 0.95rem !important;
+    }
+    
+    .wip-list li {
+        line-height: 1.5 !important;
+        font-size: 0.9rem !important;
+    }
     .mission-text-area, .wip-content, .ambition-left {
         text-align: center;
         display: flex;
