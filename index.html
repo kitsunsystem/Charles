@@ -48,9 +48,12 @@
                     <li><a href="#contact" class="nav-cta">Contact</a></li>
                 </ul>
             </nav>
-            <button class="mobile-menu-toggle" aria-label="Ouvrir le menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+            <div class="header-actions">
+                <button id="lang-switch" class="lang-switch-btn">EN</button>
+                <button class="mobile-menu-toggle" aria-label="Ouvrir le menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -171,7 +174,7 @@
                             <ul class="wip-list">
                                 <li class="wip-list-item">
                                     <span class="wip-list-icon"><i class="fa-solid fa-circle-check text-gold"></i></span>
-                                    <span class="wip-list-text"><strong>Dès 2025 :</strong> Installation de <strong>5 Dômes haut de gamme</strong> pour accueillir nos partenaires, entrepreneurs et investisseurs au cœur de la nature.</span>
+                                    <span class="wip-list-text"><strong>Dès 2027 :</strong> Installation de <strong>5 Dômes haut de gamme</strong> pour accueillir nos partenaires, entrepreneurs et investisseurs au cœur de la nature.</span>
                                 </li>
                                 <li class="wip-list-item">
                                     <span class="wip-list-icon"><i class="fa-solid fa-circle-check text-gold"></i></span>
@@ -359,7 +362,7 @@
                                 </p>
                             </div>
                             <div class="card-footer">
-                                <p class="card-emphasis">5 Dômes haut de gamme (Dès 2025) puis développement du village de lodges.</p>
+                                <p class="card-emphasis">5 Dômes haut de gamme (Dès 2027) puis développement du village de lodges.</p>
                             </div>
                         </div>
                     </div>
@@ -700,6 +703,242 @@
                     }
                 });
             });
+            // Translation System
+            const enTranslations = {
+                // Header & Banner
+                ".construction-bar strong": "Site under construction",
+                ".construction-bar .banner-link": "Contact us <i class='fa-solid fa-arrow-right'></i>",
+                ".main-nav ul li:nth-child(1) a": "Home",
+                ".main-nav ul li:nth-child(2) a": "Our Mission",
+                ".main-nav ul li:nth-child(3) a": "Services & Pillars",
+                ".main-nav ul li:nth-child(4) a": "Shop & Products",
+                ".main-nav ul li:nth-child(5) a": "Our Ambition",
+                ".main-nav ul li:nth-child(6) a": "Contact",
+                ".logo-subtitle": "INDIA & EUROPE GATEWAY",
+
+                // Hero
+                ".hero-content .badge-premium": "<i class='fa-solid fa-crown'></i> An Exceptional Venue",
+                ".hero-actions .btn-primary": "Discover the project",
+                ".hero-actions .btn-secondary": "Contact us",
+                ".hero-highlights .highlight-item:nth-child(1) h4": "Strategic Location",
+                ".hero-highlights .highlight-item:nth-child(1) p": "30 min from Brussels, in the heart of Europe",
+                ".hero-highlights .highlight-item:nth-child(2) h4": "Unique Ecosystem",
+                ".hero-highlights .highlight-item:nth-child(2) p": "Business, Hospitality, Education & Innovation",
+                ".hero-highlights .highlight-item:nth-child(3) h4": "Gateway",
+                ".hero-highlights .highlight-item:nth-child(3) p": "Commercial bridge of excellence India-Europe",
+
+                // Mission
+                ".mission-section .section-subtitle": "Our Concept",
+                ".mission-section .section-title": "A hub of business, gastronomy and technology",
+                ".mission-section .lead-text": "30 minutes from Brussels, Miremont Estate is much more than a historical castle. It is a premium ecosystem designed to facilitate trade and relations between India and Europe.",
+                ".mission-section .body-text": "Born from the vision of connecting two economic powers, the domain offers high-end infrastructures to accommodate companies, host international business events, and train future leaders. We offer a tailor-made interface for partners seeking to establish or strengthen their international presence.",
+                ".mission-section .premium-quote": "« Our mission is to build solid bridges, concrete connections, and shared value between talents, entrepreneurs, and institutions from both continents. »",
+                ".image-overlay-card h5": "India-Europe Partnership",
+                ".image-overlay-card p": "Uniting skills and cultures to innovate.",
+
+                // Work In Progress
+                ".work-in-progress-block .wip-mini-title": "Development in progress",
+                ".work-in-progress-block h3": "The Castle is Transforming",
+                ".wip-lead-text": "Major renovation and landscape works are currently underway to restore the domain to its full splendor and prepare the infrastructures of tomorrow.",
+                ".wip-list-item:nth-child(1) .wip-list-text": "<strong>From 2027:</strong> Installation of <strong>5 premium Domes</strong> to welcome our partners, entrepreneurs, and investors in the heart of nature.",
+                ".wip-list-item:nth-child(2) .wip-list-text": "<strong>Phase 2:</strong> Development of an <strong>autonomous lodges village</strong> harmoniously integrated into the 5-hectare park.",
+                ".indicator-text": "Phase 1 renovations in progress of finalization (2026)",
+
+                // Pillars
+                ".services-section .section-subtitle": "Our Ecosystem",
+                ".services-section .section-title": "The 10 Pillars of Miremont Estate",
+                ".services-section .section-intro": "Discover how Miremont Estate structures its activities to create commercial, technological, and cultural bridges.",
+                
+                // Card 1
+                ".services-grid .service-card:nth-child(1) h3": "India - Europe Business Gateway",
+                ".services-grid .service-card:nth-child(1) .card-body ul li:nth-child(1)": "Hosting European manufacturers and buyers",
+                ".services-grid .service-card:nth-child(1) .card-body ul li:nth-child(2)": "Search for importers and distributors",
+                ".services-grid .service-card:nth-child(1) .card-body ul li:nth-child(3)": "Organization of business meetings",
+                ".services-grid .service-card:nth-child(1) .card-body ul li:nth-child(4)": "Product demonstrations and launches",
+                ".services-grid .service-card:nth-child(1) .card-body ul li:nth-child(5)": "Development of a network of partners",
+                ".services-grid .service-card:nth-child(1) .card-emphasis": "Your presence in Europe thanks to the power and prestige of Miremont Estate.",
+
+                // Card 2
+                ".services-grid .service-card:nth-child(2) h3": "Business Club International",
+                ".services-grid .service-card:nth-child(2) .card-body ul li:nth-child(1)": "Prestigious address",
+                ".services-grid .service-card:nth-child(2) .card-body ul li:nth-child(2)": "Meeting rooms and private salons",
+                ".services-grid .service-card:nth-child(2) .card-body ul li:nth-child(3)": "Networking & events",
+                ".services-grid .service-card:nth-child(2) .card-body ul li:nth-child(4)": "Concierge services",
+
+                // Card 3
+                ".services-grid .service-card:nth-child(3) h3": "Artificial Intelligence",
+                ".services-grid .service-card:nth-child(3) .card-body ul li:nth-child(1)": "AI agents specialized by sector",
+                ".services-grid .service-card:nth-child(3) .card-body ul li:nth-child(2)": "Automated international prospecting",
+                ".services-grid .service-card:nth-child(3) .card-body ul li:nth-child(3)": "CRM and smart commercial tool",
+                ".services-grid .service-card:nth-child(3) .card-body ul li:nth-child(4)": "Smart reception and telephony",
+                ".services-grid .service-card:nth-child(3) .card-body ul li:nth-child(5)": "AI training and support",
+                ".services-grid .service-card:nth-child(3) .card-emphasis": "AI at the service of humans to accelerate commercial development.",
+
+                // Card 4
+                ".services-grid .service-card:nth-child(4) h3": "Products Imported from India",
+                ".services-grid .service-card:nth-child(4) .card-body ul li:nth-child(1)": "Company visits",
+                ".services-grid .service-card:nth-child(4) .card-body ul li:nth-child(2)": "Textiles",
+                ".services-grid .service-card:nth-child(4) .card-body ul li:nth-child(3)": "Packaging & wrapping",
+                ".services-grid .service-card:nth-child(4) .card-body ul li:nth-child(4)": "Industrial products",
+                ".services-grid .service-card:nth-child(4) .card-body ul li:nth-child(5)": "Innovative equipment",
+                ".services-grid .service-card:nth-child(4) .card-body ul li:nth-child(6)": "Other products",
+                ".services-grid .service-card:nth-child(4) .card-emphasis": "Miremont: your commercial showcase in Europe.",
+
+                // Card 5
+                ".services-grid .service-card:nth-child(5) h3": "Belgian Products Exported to India",
+                ".services-grid .service-card:nth-child(5) .card-body ul li:nth-child(1)": "Belgian chocolate",
+                ".services-grid .service-card:nth-child(5) .card-body ul li:nth-child(2)": "Belgian beers",
+                ".services-grid .service-card:nth-child(5) .card-body ul li:nth-child(3)": "Gastronomic products",
+                ".services-grid .service-card:nth-child(5) .card-body ul li:nth-child(4)": "Brands developed around Miremont",
+                ".services-grid .service-card:nth-child(5) .card-emphasis": "The best of Belgian know-how towards the Indian market.",
+
+                // Card 6
+                ".services-grid .service-card:nth-child(6) h3": "Gastronomy",
+                ".services-grid .service-card:nth-child(6) .card-body ul li:nth-child(1)": "Gastronomic receptions",
+                ".services-grid .service-card:nth-child(6) .card-body ul li:nth-child(2)": "Culinary demonstrations",
+                ".services-grid .service-card:nth-child(6) .card-body ul li:nth-child(3)": "Training & workshops",
+                ".services-grid .service-card:nth-child(6) .card-body ul li:nth-child(4)": "Gourmet events",
+                ".services-grid .service-card:nth-child(6) .card-emphasis": "With our chef Didier d'Evolffre, gastronomy will be at the heart of the Miremont experience.",
+
+                // Card 7
+                ".services-grid .service-card:nth-child(7) h3": "Miremont Academy",
+                ".services-grid .service-card:nth-child(7) .card-body ul li:nth-child(1)": "International finance and digital finance",
+                ".services-grid .service-card:nth-child(7) .card-body ul li:nth-child(2)": "International trade",
+                ".services-grid .service-card:nth-child(7) .card-body ul li:nth-child(3)": "Artificial Intelligence",
+                ".services-grid .service-card:nth-child(7) .card-body ul li:nth-child(4)": "Gastronomy & hospitality",
+                ".services-grid .service-card:nth-child(7) .card-emphasis": "A private higher education institution open to international talents.",
+
+                // Card 8
+                ".services-grid .service-card:nth-child(8) h3": "Accommodations",
+                ".services-grid .service-card:nth-child(8) .card-body ul li:nth-child(1)": "Domes 2027: 5 premium domes",
+                ".services-grid .service-card:nth-child(8) .card-body ul li:nth-child(2)": "Autonomous village of lodges (5 hectares)",
+                ".services-grid .service-card:nth-child(8) .card-body ul li:nth-child(3)": "Ideal environment for thinking and networking",
+                ".services-grid .service-card:nth-child(8) .card-body ul li:nth-child(4)": "Close connection with nature",
+                ".services-grid .service-card:nth-child(8) .card-emphasis": "5 high-end Domes (From 2027) then development of the lodges village.",
+
+                // Card 9
+                ".services-grid .service-card:nth-child(9) h3": "Events",
+                ".services-grid .service-card:nth-child(9) .card-body ul li:nth-child(1)": "Miremont Evenings",
+                ".services-grid .service-card:nth-child(9) .card-body ul li:nth-child(2)": "Entrepreneurs meetings",
+                ".services-grid .service-card:nth-child(9) .card-body ul li:nth-child(3)": "Demonstrations and launches",
+                ".services-grid .service-card:nth-child(9) .card-body ul li:nth-child(4)": "Professional receptions",
+                ".services-grid .service-card:nth-child(9) .card-emphasis": "A living place to create links and opportunities.",
+
+                // Card 10
+                ".services-grid .service-card:nth-child(10) h3": "Why Work Together?",
+                ".services-grid .service-card:nth-child(10) .reason-item:nth-child(1) h5": "Indian Economy",
+                ".services-grid .service-card:nth-child(10) .reason-item:nth-child(1) p": "One of the most dynamic economies in the world",
+                ".services-grid .service-card:nth-child(10) .reason-item:nth-child(2) h5": "European Market",
+                ".services-grid .service-card:nth-child(10) .reason-item:nth-child(2) p": "Structured, stable and solvent market",
+                ".services-grid .service-card:nth-child(10) .reason-item:nth-child(3) h5": "Sustainable Relationship",
+                ".services-grid .service-card:nth-child(10) .reason-item:nth-child(3) p": "Trust, transparency and long-term commitment",
+                ".services-grid .service-card:nth-child(10) .reason-item:nth-child(4) h5": "Value Creation",
+                ".services-grid .service-card:nth-child(10) .reason-item:nth-child(4) p": "For our partners and ecosystem",
+
+                // Boutique
+                ".boutique-section .section-subtitle": "Elite Boutique",
+                ".boutique-section .section-title": "The Flavors and Creations of Miremont",
+                ".showcase-products-grid .product-item:nth-child(1) h4": "Belgian Chocolate",
+                ".showcase-products-grid .product-item:nth-child(1) .product-desc": "Finest Belgian chocolate, crafted in Feluy.",
+                ".showcase-products-grid .product-item:nth-child(1) .product-tag": "Local Selection",
+                ".showcase-products-grid .product-item:nth-child(2) h4": "Scented Candle",
+                ".showcase-products-grid .product-item:nth-child(2) .product-desc": "Exclusive candle, signature fragrance of the castle.",
+                ".showcase-products-grid .product-item:nth-child(2) .product-tag": "Miremont Selection",
+                ".showcase-products-grid .product-item:nth-child(3) h4": "Olive Oil Selection",
+                ".showcase-products-grid .product-item:nth-child(3) .product-desc": "Premium extra virgin olive oil.",
+                ".showcase-products-grid .product-item:nth-child(3) .product-tag": "Selected Imports",
+                ".showcase-products-grid .product-item:nth-child(4) h4": "Premium Champagne",
+                ".showcase-products-grid .product-item:nth-child(4) .product-desc": "Special selection, perfect for business meetings.",
+                ".showcase-products-grid .product-item:nth-child(4) .product-tag": "Prestige Selection",
+                ".showcase-products-grid .product-item:nth-child(5) h4": "Local Honey Selection",
+                ".showcase-products-grid .product-item:nth-child(5) .product-desc": "Artisanal honey, harvested around Feluy.",
+                ".showcase-products-grid .product-item:nth-child(5) .product-tag": "Local Selection",
+                ".showcase-products-grid .product-item:nth-child(6) h4": "Miremont Spread",
+                ".showcase-products-grid .product-item:nth-child(6) .product-desc": "Gourmet chocolate spread selection.",
+                ".showcase-products-grid .product-item:nth-child(6) .product-tag": "Gourmet Selection",
+                ".showcase-products-grid .product-item:nth-child(7) h4": "Premium Coffee",
+                ".showcase-products-grid .product-item:nth-child(7) .product-desc": "Selected grand cru coffee for business events.",
+                ".showcase-products-grid .product-item:nth-child(7) .product-tag": "Elite Selection",
+
+                // Ambition
+                ".ambition-section .section-subtitle": "Building the Future",
+                ".ambition-section .ambition-left h3": "A long-term vision for our partners",
+                ".ambition-section .ambition-lead": "We do not simply wish to sell products. We want to build a network of entrepreneurs and creators.",
+                ".ambition-section .ambition-left p": "By combining the historical charm of the castle with modern tools (Artificial Intelligence, business spaces, premium accommodations), Miremont Estate becomes a unique incubator for international relations.",
+                ".collab-badge": "Local Collaboration",
+                ".collab-text": "Miremont works closely with local producers to offer Belgian excellence.",
+                
+                // Welcome Letter
+                ".letter-badge": "Welcome Letter",
+                ".letter-box h3": "Dear Talents and Partners,",
+                ".letter-content p:nth-child(1)": "I am convinced that our collaboration can become a model of synergy between India and Europe. The Château de Miremont is ready to welcome your ambitions and help your projects grow.",
+                ".letter-content p:nth-child(2)": "Our facilities and network are at your service. I look forward to welcoming you in person to the estate to build this future together.",
+                ".sig-name span": "Founder & Director",
+
+                // Under Construction
+                ".contact-section h2": "Site Under Construction",
+                ".contact-section .notice-lead": "Miremont Estate is actively preparing the official opening of its platform and exceptional facilities.",
+                ".contact-section .notice-text": "We are not taking registrations or bookings at the moment. Our teams remain at your disposal by email for any partnership or information request.",
+                ".contact-section .btn-primary": "Contact us by email <i class='fa-solid fa-envelope'></i>",
+                
+                // Footer
+                ".footer-col-links h4": "Quick Links",
+                ".footer-col-contact h4": "Contact Info",
+                ".footer-bottom p": "© 2026 Miremont Estate. All rights reserved.",
+
+                // Custom Modal
+                ".custom-modal h3": "Networks Under Construction",
+                ".custom-modal p": "Our official social media pages are currently being created and configured. They will be available very shortly!",
+                ".custom-modal .modal-btn-ok": "Understood"
+            };
+
+            // Grab initial French texts from DOM on page load
+            const frTranslations = {};
+            for (const selector in enTranslations) {
+                const element = document.querySelector(selector);
+                if (element) {
+                    frTranslations[selector] = element.innerHTML.trim();
+                }
+            }
+
+            const translations = {
+                fr: frTranslations,
+                en: enTranslations
+            };
+
+            let currentLang = localStorage.getItem('lang') || 'fr';
+
+            const setLanguage = function(lang) {
+                const dict = translations[lang];
+                for (const selector in dict) {
+                    const elements = document.querySelectorAll(selector);
+                    elements.forEach(element => {
+                        element.innerHTML = dict[selector];
+                    });
+                }
+                const langBtn = document.getElementById('lang-switch');
+                if (langBtn) {
+                    langBtn.textContent = lang === 'fr' ? 'EN' : 'FR';
+                }
+                currentLang = lang;
+                localStorage.setItem('lang', lang);
+            };
+
+            // Setup Event Listener
+            const langBtn = document.getElementById('lang-switch');
+            if (langBtn) {
+                langBtn.addEventListener('click', function() {
+                    const nextLang = currentLang === 'fr' ? 'en' : 'fr';
+                    setLanguage(nextLang);
+                });
+            }
+
+            // Apply saved language choice on load
+            if (currentLang === 'en') {
+                // Need a tiny delay to ensure DOM is fully populated and fr cache is complete
+                setTimeout(() => setLanguage('en'), 50);
+            }
+
             // Social Media Link Custom Modal Trigger
             const socialLinks = document.querySelectorAll('.footer-socials a');
             const socialModal = document.getElementById('social-modal');

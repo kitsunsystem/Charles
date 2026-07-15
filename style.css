@@ -1800,3 +1800,40 @@ ul {
     box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
     opacity: 0.95;
 }
+
+/* -------------------------------------------------------------
+   Language Switcher & Header Actions
+   ------------------------------------------------------------- */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lang-switch-btn {
+    background-color: transparent;
+    border: 1.5px solid var(--color-gold);
+    color: var(--color-gold);
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: 750;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lang-switch-btn:hover {
+    background-color: var(--color-gold);
+    color: var(--color-bg-primary);
+    box-shadow: var(--border-glow);
+}
+
+@media (max-width: 768px) {
+    .lang-switch-btn {
+        padding: 4px 8px;
+        font-size: 0.75rem;
+    }
+}
