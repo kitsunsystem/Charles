@@ -705,18 +705,19 @@
             });
             // Translation System
             const enTranslations = {
-                // Header & Banner
-                ".construction-bar strong": "Site under construction",
-                ".construction-bar .banner-link": "Contact us <i class='fa-solid fa-arrow-right'></i>",
+                // Construction Bar
+                ".construction-bar-content": "<span class='pulse-dot'></span> <strong>Site under construction</strong> — Miremont Estate is preparing its official opening. <a href='#contact' class='banner-link'>Contact us <i class='fa-solid fa-arrow-right'></i></a>",
+
+                // Header & Navigation
                 ".main-nav ul li:nth-child(1) a": "Home",
                 ".main-nav ul li:nth-child(2) a": "Our Mission",
                 ".main-nav ul li:nth-child(3) a": "Services & Pillars",
-                ".main-nav ul li:nth-child(4) a": "Shop & Products",
+                ".main-nav ul li:nth-child(4) a": "Boutique & Products",
                 ".main-nav ul li:nth-child(5) a": "Our Ambition",
                 ".main-nav ul li:nth-child(6) a": "Contact",
                 ".logo-subtitle": "INDIA & EUROPE GATEWAY",
 
-                // Hero
+                // Hero Section
                 ".hero-content .badge-premium": "<i class='fa-solid fa-crown'></i> An Exceptional Venue",
                 ".hero-actions .btn-primary": "Discover the project",
                 ".hero-actions .btn-secondary": "Contact us",
@@ -727,7 +728,7 @@
                 ".hero-highlights .highlight-item:nth-child(3) h4": "Gateway",
                 ".hero-highlights .highlight-item:nth-child(3) p": "Commercial bridge of excellence India-Europe",
 
-                // Mission
+                // Mission Section
                 ".mission-section .section-subtitle": "Our Concept",
                 ".mission-section .section-title": "A hub of business, gastronomy and technology",
                 ".mission-section .lead-text": "30 minutes from Brussels, Miremont Estate is much more than a historical castle. It is a premium ecosystem designed to facilitate trade and relations between India and Europe.",
@@ -736,7 +737,7 @@
                 ".image-overlay-card h5": "India-Europe Partnership",
                 ".image-overlay-card p": "Uniting skills and cultures to innovate.",
 
-                // Work In Progress
+                // Work In Progress Section
                 ".work-in-progress-block .wip-mini-title": "Development in progress",
                 ".work-in-progress-block h3": "The Castle is Transforming",
                 ".wip-lead-text": "Major renovation and landscape works are currently underway to restore the domain to its full splendor and prepare the infrastructures of tomorrow.",
@@ -744,11 +745,11 @@
                 ".wip-list-item:nth-child(2) .wip-list-text": "<strong>Phase 2:</strong> Development of an <strong>autonomous lodges village</strong> harmoniously integrated into the 5-hectare park.",
                 ".indicator-text": "Phase 1 renovations in progress of finalization (2026)",
 
-                // Pillars
+                // Services / Pillars Section Header
                 ".services-section .section-subtitle": "Our Ecosystem",
                 ".services-section .section-title": "The 10 Pillars of Miremont Estate",
                 ".services-section .section-intro": "Discover how Miremont Estate structures its activities to create commercial, technological, and cultural bridges.",
-                
+
                 // Card 1
                 ".services-grid .service-card:nth-child(1) h3": "India - Europe Business Gateway",
                 ".services-grid .service-card:nth-child(1) .card-body ul li:nth-child(1)": "Hosting European manufacturers and buyers",
@@ -758,12 +759,12 @@
                 ".services-grid .service-card:nth-child(1) .card-body ul li:nth-child(5)": "Development of a network of partners",
                 ".services-grid .service-card:nth-child(1) .card-emphasis": "Your presence in Europe thanks to the power and prestige of Miremont Estate.",
 
-                // Card 2
+                // Card 2 (With FontAwesome Icons inside list items)
                 ".services-grid .service-card:nth-child(2) h3": "Business Club International",
-                ".services-grid .service-card:nth-child(2) .card-body ul li:nth-child(1)": "Prestigious address",
-                ".services-grid .service-card:nth-child(2) .card-body ul li:nth-child(2)": "Meeting rooms and private salons",
-                ".services-grid .service-card:nth-child(2) .card-body ul li:nth-child(3)": "Networking & events",
-                ".services-grid .service-card:nth-child(2) .card-body ul li:nth-child(4)": "Concierge services",
+                ".services-grid .service-card:nth-child(2) .card-body ul li:nth-child(1)": "<i class='fa-solid fa-location-dot'></i> Prestigious address",
+                ".services-grid .service-card:nth-child(2) .card-body ul li:nth-child(2)": "<i class='fa-solid fa-handshake'></i> Meeting rooms and private salons",
+                ".services-grid .service-card:nth-child(2) .card-body ul li:nth-child(3)": "<i class='fa-solid fa-users'></i> Networking & events",
+                ".services-grid .service-card:nth-child(2) .card-body ul li:nth-child(4)": "<i class='fa-solid fa-bell-concierge'></i> Concierge services",
 
                 // Card 3
                 ".services-grid .service-card:nth-child(3) h3": "Artificial Intelligence",
@@ -827,63 +828,71 @@
                 // Card 10
                 ".services-grid .service-card:nth-child(10) h3": "Why Work Together?",
                 ".services-grid .service-card:nth-child(10) .reason-item:nth-child(1) h5": "Indian Economy",
-                ".services-grid .service-card:nth-child(10) .reason-item:nth-child(1) p": "One of the most dynamic economies in the world",
+                ".services-grid .service-card:nth-child(10) .reason-item:nth-child(1) p": "One of the most dynamic economies in the world.",
                 ".services-grid .service-card:nth-child(10) .reason-item:nth-child(2) h5": "European Market",
-                ".services-grid .service-card:nth-child(10) .reason-item:nth-child(2) p": "Structured, stable and solvent market",
+                ".services-grid .service-card:nth-child(10) .reason-item:nth-child(2) p": "Structured, stable and full of opportunities.",
                 ".services-grid .service-card:nth-child(10) .reason-item:nth-child(3) h5": "Sustainable Relationship",
-                ".services-grid .service-card:nth-child(10) .reason-item:nth-child(3) p": "Trust, transparency and long-term commitment",
-                ".services-grid .service-card:nth-child(10) .reason-item:nth-child(4) h5": "Value Creation",
-                ".services-grid .service-card:nth-child(10) .reason-item:nth-child(4) p": "For our partners and ecosystem",
+                ".services-grid .service-card:nth-child(10) .reason-item:nth-child(3) p": "Trust, transparency, respect and long-term vision.",
+                ".services-grid .service-card:nth-child(10) .card-emphasis": "Value creation for our partners, our customers and our regions.",
 
-                // Boutique
-                ".boutique-section .section-subtitle": "Elite Boutique",
-                ".boutique-section .section-title": "The Flavors and Creations of Miremont",
-                ".showcase-products-grid .product-item:nth-child(1) h4": "Belgian Chocolate",
-                ".showcase-products-grid .product-item:nth-child(1) .product-desc": "Finest Belgian chocolate, crafted in Feluy.",
-                ".showcase-products-grid .product-item:nth-child(1) .product-tag": "Local Selection",
-                ".showcase-products-grid .product-item:nth-child(2) h4": "Scented Candle",
-                ".showcase-products-grid .product-item:nth-child(2) .product-desc": "Exclusive candle, signature fragrance of the castle.",
-                ".showcase-products-grid .product-item:nth-child(2) .product-tag": "Miremont Selection",
-                ".showcase-products-grid .product-item:nth-child(3) h4": "Olive Oil Selection",
-                ".showcase-products-grid .product-item:nth-child(3) .product-desc": "Premium extra virgin olive oil.",
-                ".showcase-products-grid .product-item:nth-child(3) .product-tag": "Selected Imports",
-                ".showcase-products-grid .product-item:nth-child(4) h4": "Premium Champagne",
-                ".showcase-products-grid .product-item:nth-child(4) .product-desc": "Special selection, perfect for business meetings.",
-                ".showcase-products-grid .product-item:nth-child(4) .product-tag": "Prestige Selection",
-                ".showcase-products-grid .product-item:nth-child(5) h4": "Local Honey Selection",
-                ".showcase-products-grid .product-item:nth-child(5) .product-desc": "Artisanal honey, harvested around Feluy.",
-                ".showcase-products-grid .product-item:nth-child(5) .product-tag": "Local Selection",
-                ".showcase-products-grid .product-item:nth-child(6) h4": "Miremont Spread",
-                ".showcase-products-grid .product-item:nth-child(6) .product-desc": "Gourmet chocolate spread selection.",
-                ".showcase-products-grid .product-item:nth-child(6) .product-tag": "Gourmet Selection",
-                ".showcase-products-grid .product-item:nth-child(7) h4": "Premium Coffee",
-                ".showcase-products-grid .product-item:nth-child(7) .product-desc": "Selected grand cru coffee for business events.",
-                ".showcase-products-grid .product-item:nth-child(7) .product-tag": "Elite Selection",
+                // Boutique Section
+                ".boutique-section .section-subtitle": "Château de Miremont",
+                ".boutique-section .section-title": "The Art of Hosting & Fine Grocery",
+                ".boutique-section .section-intro": "An exclusive range of refined products selected or crafted under the Miremont brand.",
+                ".showcase-products-grid .product-item:nth-child(1) h4": "Artisanal Fine Chocolates",
+                ".showcase-products-grid .product-item:nth-child(1) .product-desc": "Dark Chocolate 72%, smooth White Chocolate and melting Milk Chocolate. Belgian artisanal excellence.",
+                ".showcase-products-grid .product-item:nth-child(1) .product-tag": "Belgian Gastronomy",
+                ".showcase-products-grid .product-item:nth-child(2) h4": "Prestige Scented Candles",
+                ".showcase-products-grid .product-item:nth-child(2) .product-desc": "The art of ambiance and sophistication. High-quality wax, hand-poured in an artisanal way.",
+                ".showcase-products-grid .product-item:nth-child(2) .product-tag": "Lifestyle",
+                ".showcase-products-grid .product-item:nth-child(3) h4": "Extra Virgin Olive Oil",
+                ".showcase-products-grid .product-item:nth-child(3) .product-desc": "Carefully selected at the Château de Miremont, cold-extracted. Origin Spain.",
+                ".showcase-products-grid .product-item:nth-child(3) .product-tag": "Fine Grocery",
+                ".showcase-products-grid .product-item:nth-child(4) h4": "Brut Bubbles - Selected Vintage",
+                ".showcase-products-grid .product-item:nth-child(4) .product-desc": "Fresh & elegant, with bubbles of incomparable finesse. Ideal to celebrate your projects.",
+                ".showcase-products-grid .product-item:nth-child(4) .product-tag": "Wines & Bubbles",
+                ".showcase-products-grid .product-item:nth-child(5) h4": "Flower Honey",
+                ".showcase-products-grid .product-item:nth-child(5) .product-desc": "Honey of exceptional purity, harvested with passion to sweeten your tasting moments.",
+                ".showcase-products-grid .product-item:nth-child(5) .product-tag": "Sweet Delicacies",
+                ".showcase-products-grid .product-item:nth-child(6) h4": "Chocolate & Hazelnut Spread",
+                ".showcase-products-grid .product-item:nth-child(6) .product-desc": "An exclusive recipe with Piedmont hazelnuts. Artisanal manufacturing without compromise.",
+                ".showcase-products-grid .product-item:nth-child(6) .product-tag": "Sweet Delicacies",
 
-                // Ambition
+                // Ambition Section
                 ".ambition-section .section-subtitle": "Building the Future",
-                ".ambition-section .ambition-left h3": "A long-term vision for our partners",
-                ".ambition-section .ambition-lead": "We do not simply wish to sell products. We want to build a network of entrepreneurs and creators.",
-                ".ambition-section .ambition-left p": "By combining the historical charm of the castle with modern tools (Artificial Intelligence, business spaces, premium accommodations), Miremont Estate becomes a unique incubator for international relations.",
-                ".collab-badge": "Local Collaboration",
-                ".collab-text": "Miremont works closely with local producers to offer Belgian excellence.",
-                
-                // Welcome Letter
-                ".letter-badge": "Welcome Letter",
-                ".letter-box h3": "Dear Talents and Partners,",
-                ".letter-content p:nth-child(1)": "I am convinced that our collaboration can become a model of synergy between India and Europe. The Château de Miremont is ready to welcome your ambitions and help your projects grow.",
-                ".letter-content p:nth-child(2)": "Our facilities and network are at your service. I look forward to welcoming you in person to the estate to build this future together.",
-                ".sig-name span": "Founder & Director",
+                ".ambition-left h3": "Our Ambition",
+                ".ambition-lead": "We do not simply wish to sell products. We want to build a network of European and Indian entrepreneurs, capable of creating new commercial, educational, and cultural opportunities together.",
+                ".ambition-left p:not(.ambition-lead)": "The Château de Miremont will be a place where ideas become projects, where meetings become partnerships, and where partnerships create value for everyone.",
+                ".collab-badge": "Sustainable Cooperation",
+                ".collab-text": "In collaboration with local authorities for a sustainable and harmonious development.",
 
-                // Under Construction
-                ".contact-section h2": "Site Under Construction",
-                ".contact-section .notice-lead": "Miremont Estate is actively preparing the official opening of its platform and exceptional facilities.",
-                ".contact-section .notice-text": "We are not taking registrations or bookings at the moment. Our teams remain at your disposal by email for any partnership or information request.",
-                ".contact-section .btn-primary": "Contact us by email <i class='fa-solid fa-envelope'></i>",
-                
-                // Footer
+                // Welcome Letter
+                ".letter-badge": "President's Message",
+                ".letter-box h3": "Let's build the bridge between India and Europe together",
+                ".letter-content p:nth-child(1)": "Dear Talents and Partners,",
+                ".letter-content p:nth-child(2)": "I am convinced that our collaboration can become a model of cooperation between India and Europe. By uniting our skills, our cultures and our will to innovate, we can create much more than a commercial relationship: a sustainable partnership based on trust, respect and a common ambition.",
+                ".letter-content p:nth-child(3)": "Welcome to Miremont.",
+                ".sig-name strong": "Charles-Antoine Paternostre de La Mairieu",
+                ".sig-name span": "Founder of Miremont Estate",
+
+                // Contact Card
+                ".construction-notice-card h2": "Site Under Construction",
+                ".construction-notice-card .notice-lead": "Miremont Estate is actively preparing the official opening of its platform and exceptional facilities.",
+                ".construction-notice-card .notice-text": "We are not taking registrations or bookings at the moment. Our teams remain at your disposal by email for any partnership or information request.",
+                ".construction-notice-card .btn-primary": "Contact us by email <i class='fa-solid fa-envelope'></i>",
+
+                // Footer Columns Headers
                 ".footer-col-links h4": "Quick Links",
                 ".footer-col-contact h4": "Contact Info",
+                
+                // Footer Links
+                ".footer-col-links ul li:nth-child(1) a": "Home",
+                ".footer-col-links ul li:nth-child(2) a": "Our Mission",
+                ".footer-col-links ul li:nth-child(3) a": "The 10 Pillars",
+                ".footer-col-links ul li:nth-child(4) a": "Boutique",
+                ".footer-col-links ul li:nth-child(5) a": "Our Ambition",
+                
+                // Footer Bottom
                 ".footer-bottom p": "© 2026 Miremont Estate. All rights reserved.",
 
                 // Custom Modal
