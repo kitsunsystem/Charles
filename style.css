@@ -637,15 +637,27 @@ ul {
     margin-bottom: 25px;
 }
 
-.wip-list li {
+.wip-list-item {
     display: flex;
     align-items: flex-start;
     gap: 12px;
     margin-bottom: 12px;
-    font-size: 0.95rem;
 }
 
-.wip-list li strong {
+.wip-list-icon {
+    flex-shrink: 0;
+    color: var(--color-gold);
+    margin-top: 3px;
+    font-size: 1rem;
+}
+
+.wip-list-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+}
+
+.wip-list-text strong {
     color: var(--color-white);
 }
 

@@ -165,17 +165,17 @@
                         <div class="wip-content">
                             <span class="wip-mini-title">Développement en cours</span>
                             <h3>Le Château se transforme</h3>
-                            <p>
+                            <p class="wip-lead-text">
                                 De grands travaux d'aménagement et de rénovation sont actuellement en cours pour redonner au domaine toute sa splendeur et préparer les infrastructures de demain. 
                             </p>
                             <ul class="wip-list">
-                                <li>
-                                    <i class="fa-solid fa-circle-check text-gold"></i>
-                                    <strong>Dès 2025 :</strong> Installation de <strong>5 Dômes haut de gamme</strong> pour accueillir nos partenaires, entrepreneurs et investisseurs au cœur de la nature.
+                                <li class="wip-list-item">
+                                    <span class="wip-list-icon"><i class="fa-solid fa-circle-check text-gold"></i></span>
+                                    <span class="wip-list-text"><strong>Dès 2025 :</strong> Installation de <strong>5 Dômes haut de gamme</strong> pour accueillir nos partenaires, entrepreneurs et investisseurs au cœur de la nature.</span>
                                 </li>
-                                <li>
-                                    <i class="fa-solid fa-circle-check text-gold"></i>
-                                    <strong>Phase 2 :</strong> Développement d'un <strong>village de lodges autonomes</strong> intégrés harmonieusement au parc de 5 hectares.
+                                <li class="wip-list-item">
+                                    <span class="wip-list-icon"><i class="fa-solid fa-circle-check text-gold"></i></span>
+                                    <span class="wip-list-text"><strong>Phase 2 :</strong> Développement d'un <strong>village de lodges autonomes</strong> intégrés harmonieusement au parc de 5 hectares.</span>
                                 </li>
                             </ul>
                             <div class="wip-status-indicator">
@@ -700,24 +700,6 @@
                     }
                 });
             });
-            
-            // Simple Scroll Reveal Effect for Elements
-            const animElements = document.querySelectorAll('.service-card, .product-item, .wip-card, .ambition-card-container, .construction-notice-card');
-            
-            const revealOnScroll = function() {
-                for (let i = 0; i < animElements.length; i++) {
-                    const windowHeight = window.innerHeight;
-                    const elementTop = animElements[i].getBoundingClientRect().top;
-                    const elementVisible = 100;
-                    
-                    if (elementTop < windowHeight - elementVisible) {
-                        animElements[i].classList.add("reveal-active");
-                    }
-                }
-            };
-            
-            window.addEventListener("scroll", revealOnScroll);
-            revealOnScroll(); // Trigger once on load
         });
     </script>
 </body>
