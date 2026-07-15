@@ -1695,3 +1695,108 @@ ul {
         width: 120px;
     }
 }
+
+/* -------------------------------------------------------------
+   Custom Premium Modal
+   ------------------------------------------------------------- */
+.custom-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.custom-modal.modal-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(6, 11, 24, 0.85);
+    backdrop-filter: blur(8px);
+}
+
+.modal-card {
+    position: relative;
+    background: linear-gradient(135deg, var(--color-bg-secondary) 0%, rgba(18, 30, 58, 0.98) 100%);
+    border: 2px solid var(--color-gold);
+    border-radius: var(--border-radius-lg);
+    padding: 40px 30px;
+    width: 90%;
+    max-width: 420px;
+    text-align: center;
+    box-shadow: var(--border-glow);
+    transform: translateY(20px);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 2001;
+}
+
+.custom-modal.modal-active .modal-card {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.modal-close:hover {
+    color: var(--color-gold);
+}
+
+.modal-icon {
+    font-size: 2.8rem;
+    color: var(--color-gold);
+    margin-bottom: 20px;
+}
+
+.modal-card h3 {
+    font-size: 1.5rem;
+    color: var(--color-white);
+    margin-bottom: 12px;
+}
+
+.modal-card p {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.modal-btn-ok {
+    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+    color: var(--color-bg-primary);
+    border: none;
+    border-radius: var(--border-radius-md);
+    padding: 12px 30px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    width: 100%;
+}
+
+.modal-btn-ok:hover {
+    box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
+    opacity: 0.95;
+}

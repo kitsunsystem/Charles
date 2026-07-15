@@ -628,7 +628,7 @@
                         </li>
                         <li>
                             <i class="fa-solid fa-globe"></i>
-                            <a href="https://www.miremont-estate.be" target="_blank">www.miremont-estate.be</a>
+                            <a href="https://miremont-estate.be" target="_blank">miremont-estate.be</a>
                         </li>
                     </ul>
                 </div>
@@ -700,7 +700,46 @@
                     }
                 });
             });
+            // Social Media Link Custom Modal Trigger
+            const socialLinks = document.querySelectorAll('.footer-socials a');
+            const socialModal = document.getElementById('social-modal');
+            const modalClose = socialModal.querySelector('.modal-close');
+            const modalBtnOk = socialModal.querySelector('.modal-btn-ok');
+            const modalOverlay = socialModal.querySelector('.modal-overlay');
+
+            const openModal = function(e) {
+                e.preventDefault();
+                socialModal.classList.add('modal-active');
+            };
+
+            const closeModal = function() {
+                socialModal.classList.remove('modal-active');
+            };
+
+            socialLinks.forEach(link => {
+                link.addEventListener('click', openModal);
+            });
+
+            modalClose.addEventListener('click', closeModal);
+            modalBtnOk.addEventListener('click', closeModal);
+            modalOverlay.addEventListener('click', closeModal);
         });
     </script>
+    <!-- Social Notice Modal -->
+    <div id="social-modal" class="custom-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-card">
+            <button class="modal-close" aria-label="Fermer">&times;</button>
+            <div class="modal-icon">
+                <i class="fa-solid fa-hourglass-half"></i>
+            </div>
+            <h3>Réseaux en cours de construction</h3>
+            <p>
+                Nos pages de réseaux sociaux officielles sont en cours de création et de configuration. Elles seront disponibles très prochainement !
+            </p>
+            <button class="modal-btn-ok">Compris</button>
+        </div>
+    </div>
+
 </body>
 </html>
