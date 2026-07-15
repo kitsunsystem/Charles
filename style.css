@@ -1509,6 +1509,44 @@ ul {
     .notice-lead {
         font-size: 1.1rem;
     }
+
+    /* Centering and spacing rules for text areas on mobile */
+    .mission-text-area, .wip-content, .ambition-left {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .mission-text-area .accent-line, 
+    .ambition-left .accent-line {
+        margin: 20px auto;
+        background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+    }
+    
+    .premium-quote {
+        text-align: center;
+        border-left: none;
+        border-top: 1.5px solid var(--color-gold);
+        border-bottom: 1.5px solid var(--color-gold);
+        padding: 18px 0;
+        margin: 25px 0;
+        width: 100%;
+    }
+    
+    .wip-list {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .local-collab-block {
+        text-align: center;
+        margin: 25px auto 0 auto;
+        width: 100%;
+        max-width: 450px;
+    }
 }
 
 @media (max-width: 480px) {
