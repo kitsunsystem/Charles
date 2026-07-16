@@ -736,9 +736,10 @@ ul {
 
 .card-header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 25px;
+    gap: 8px;
+    margin-bottom: 20px;
 }
 
 .card-num {
@@ -747,12 +748,14 @@ ul {
     color: var(--color-gold);
     opacity: 0.75;
     font-weight: 700;
+    line-height: 1;
 }
 
 .service-card h3 {
-    font-size: 1.45rem;
-    line-height: 1.3;
+    font-size: 1.25rem;
+    line-height: 1.25;
     font-weight: 700;
+    width: 100%;
 }
 
 .card-body {
@@ -1110,6 +1113,22 @@ ul {
     align-items: center;
     border-top: 1px solid rgba(0, 0, 0, 0.08);
     padding-top: 20px;
+}
+
+.sig-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.president-portrait {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 2px solid var(--color-gold);
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
 .sig-name {
@@ -1689,6 +1708,12 @@ ul {
         gap: 15px;
         align-items: center;
         text-align: center;
+    }
+    
+    .sig-left {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
     }
     
     .signature-line {
