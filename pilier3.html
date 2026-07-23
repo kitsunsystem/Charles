@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miremont Estate - Intelligence Artificielle</title>
+    <meta name="description" content="Découvrez le pôle Intelligence Artificielle de Miremont Estate. Domaine privé à 20 min de Bruxelles.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css?v=7.0">
+    
+    <style>
+        .pillar-page-hero {
+            position: relative;
+            padding: 160px 0 90px 0;
+            background-size: cover;
+            background-position: center;
+            border-bottom: 1.5px solid var(--color-gold);
+        }
+        .pillar-page-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(6, 11, 24, 0.75) 0%, rgba(6, 11, 24, 0.95) 100%);
+            z-index: 1;
+        }
+        .pillar-page-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        .pillar-nav-breadcrumb {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: var(--color-gold);
+            margin-bottom: 20px;
+            background-color: rgba(197, 160, 89, 0.1);
+            padding: 6px 18px;
+            border-radius: 20px;
+            border: 1px solid rgba(197, 160, 89, 0.3);
+        }
+        .pillar-nav-breadcrumb a {
+            color: var(--color-text-secondary);
+        }
+        .pillar-nav-breadcrumb a:hover {
+            color: var(--color-gold);
+        }
+        .pillar-page-num {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--color-gold);
+            font-weight: 700;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .pillar-page-title {
+            font-size: 2.6rem;
+            margin-bottom: 15px;
+            color: var(--color-white);
+        }
+        .pillar-details-card {
+            background-color: var(--color-bg-card);
+            border: 1.5px solid rgba(197, 160, 89, 0.3);
+            border-radius: var(--border-radius-lg);
+            padding: 45px;
+            margin: 50px auto;
+            max-width: 850px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(10px);
+        }
+        .pillar-items-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .pillar-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.1rem;
+            color: var(--color-text-primary);
+            background-color: rgba(255, 255, 255, 0.03);
+            padding: 15px 20px;
+            border-radius: var(--border-radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .pillar-item-icon {
+            color: var(--color-gold);
+            font-size: 1.3rem;
+            min-width: 25px;
+        }
+        .pillar-page-emphasis {
+            background: linear-gradient(135deg, rgba(197, 160, 89, 0.15) 0%, rgba(18, 30, 58, 0.8) 100%);
+            border-left: 3px solid var(--color-gold);
+            padding: 20px 25px;
+            border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+            font-size: 1.05rem;
+            color: var(--color-gold-light);
+            font-weight: 500;
+            margin-top: 35px;
+        }
+        .pillar-cta-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .btn-back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 25px;
+            color: var(--color-gold);
+            font-weight: 600;
+        }
+        .btn-back-link:hover {
+            color: var(--color-white);
+        }
+        @media (max-width: 768px) {
+            .pillar-page-hero {
+                padding: 130px 0 60px 0;
+            }
+            .pillar-page-title {
+                font-size: 2rem;
+            }
+            .pillar-details-card {
+                padding: 25px 20px;
+                margin: 30px auto;
+            }
+            .pillar-item {
+                font-size: 0.95rem;
+                padding: 12px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Construction Bar -->
+    <div class="construction-bar" id="construction-bar">
+        <div class="construction-bar-content">
+            <span class="pulse-dot"></span>
+            <strong>Site en cours de construction</strong> — Miremont Estate prépare son ouverture officielle. 
+            <a href="index.html#contact" class="banner-link">Nous contacter <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-area">
+                <img src="image00021.jpeg" alt="Logo Château de Miremont" class="header-logo">
+                <div class="logo-text">
+                    <span class="logo-title">MIREMONT ESTATE</span>
+                    <span class="logo-subtitle">INTERNATIONAL GATEWAY</span>
+                </div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html#hero">Accueil</a></li>
+                    <li><a href="index.html#mission">Notre Mission</a></li>
+                    <li><a href="index.html#services">Services & Pôles</a></li>
+                    <li><a href="index.html#boutique">Boutique</a></li>
+                    <li><a href="index.html#ambition">Notre Ambition</a></li>
+                    <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="lang-switch" class="lang-switch-btn">EN</button>
+                <button class="mobile-menu-toggle" aria-label="Ouvrir le menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Header -->
+    <section class="pillar-page-hero" style="background-image: url('image00009.jpeg');">
+        <div class="pillar-page-overlay"></div>
+        <div class="container">
+            <div class="pillar-page-content">
+                <div class="pillar-nav-breadcrumb">
+                    <a href="index.html">Accueil</a>
+                    <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i>
+                    <a href="index.html#services">Les 10 Piliers</a>
+                    <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i>
+                    <span>Pilier 03</span>
+                </div>
+                <span class="pillar-page-num">PILIER 03</span>
+                <h1 class="pillar-page-title i18n-text" data-fr="Intelligence Artificielle" data-en="Artificial Intelligence">Intelligence Artificielle</h1>
+                <div class="accent-line center"></div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+            
+            <div class="pillar-details-card">
+                <h3 class="text-center i18n-text" data-fr="Détails du Pôle" data-en="Pillar Overview">Détails du Pôle</h3>
+                <div class="accent-line center"></div>
+                
+                <ul class="pillar-items-list">
+                    
+                    <li class="pillar-item">
+                        <i class="fa-regular fa-circle-check pillar-item-icon"></i>
+                        <span class="i18n-text" data-fr="Agents IA spécialisés par secteur" data-en="AI agents specialized by sector">Agents IA spécialisés par secteur</span>
+                    </li>
+                    <li class="pillar-item">
+                        <i class="fa-regular fa-circle-check pillar-item-icon"></i>
+                        <span class="i18n-text" data-fr="Prospection internationale automatisée" data-en="Automated international prospecting">Prospection internationale automatisée</span>
+                    </li>
+                    <li class="pillar-item">
+                        <i class="fa-regular fa-circle-check pillar-item-icon"></i>
+                        <span class="i18n-text" data-fr="CRM et outil commercial intelligent" data-en="CRM and smart commercial tool">CRM et outil commercial intelligent</span>
+                    </li>
+                    <li class="pillar-item">
+                        <i class="fa-regular fa-circle-check pillar-item-icon"></i>
+                        <span class="i18n-text" data-fr="Accueil et téléphonie intelligents" data-en="Smart reception and telephony">Accueil et téléphonie intelligents</span>
+                    </li>
+                    <li class="pillar-item">
+                        <i class="fa-regular fa-circle-check pillar-item-icon"></i>
+                        <span class="i18n-text" data-fr="Formation et accompagnement IA" data-en="AI training and support">Formation et accompagnement IA</span>
+                    </li>
+                </ul>
+
+                <div class="pillar-page-emphasis i18n-text" data-fr="L'IA au service de l'humain pour accélérer le développement commercial" data-en="AI at the service of humans to accelerate commercial development">
+                    L'IA au service de l'humain pour accélérer le développement commercial
+                </div>
+            </div>
+
+            <div class="pillar-cta-section">
+                <a href="index.html#contact" class="btn-primary">
+                    <span class="i18n-text" data-fr="Nous contacter" data-en="Contact us">Nous contacter</span> 
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <br>
+                <a href="index.html#services" class="btn-back-link">
+                    <i class="fa-solid fa-arrow-left"></i> 
+                    <span class="i18n-text" data-fr="Retour aux 10 Piliers" data-en="Back to 10 Pillars">Retour aux 10 Piliers</span>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 80px;">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col-brand">
+                    <img src="image00021.jpeg" alt="Château de Miremont Logo" class="footer-logo">
+                    <h4>MIREMONT ESTATE</h4>
+                    <p class="footer-tagline">International Business & Hospitality Gateway</p>
+                </div>
+                <div class="footer-col-contact">
+                    <h4>Coordonnées</h4>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <i class="fa-solid fa-map-location-dot"></i>
+                            <span><strong>Château de Miremont</strong><br>7181 Feluy - Belgique</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:contact@chateau-miremont.be">contact@chateau-miremont.be</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-globe"></i>
+                            <a href="https://www.chateau-miremont.be">www.chateau-miremont.be</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Miremont Estate. Tous droits réservés. Site temporaire en cours de construction.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- i18n & Mobile Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const langBtn = document.getElementById('lang-switch');
+            let currentLang = 'FR';
+
+            if (langBtn) {
+                langBtn.addEventListener('click', () => {
+                    currentLang = currentLang === 'FR' ? 'EN' : 'FR';
+                    langBtn.textContent = currentLang === 'FR' ? 'EN' : 'FR';
+
+                    document.querySelectorAll('.i18n-text').forEach(el => {
+                        const text = el.getAttribute(`data-${currentLang.toLowerCase()}`);
+                        if (text) {
+                            el.innerHTML = text;
+                        }
+                    });
+                });
+            }
+
+            const toggleBtn = document.querySelector('.mobile-menu-toggle');
+            const mainNav = document.querySelector('.main-nav');
+            if (toggleBtn && mainNav) {
+                toggleBtn.addEventListener('click', () => {
+                    mainNav.classList.toggle('nav-active');
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

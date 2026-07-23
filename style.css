@@ -1896,3 +1896,31 @@ ul {
         font-size: 0.75rem;
     }
 }
+
+/* Card Discover Link & Cursor */
+.service-card {
+    cursor: pointer;
+}
+
+.card-action-link {
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px dashed rgba(197, 160, 89, 0.3);
+}
+
+.btn-card-discover {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-gold);
+    transition: var(--transition-smooth);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.service-card:hover .btn-card-discover {
+    color: var(--color-white);
+    transform: translateX(5px);
+}
